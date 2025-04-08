@@ -1,0 +1,27 @@
+{
+  "hero": {
+    "title": "Let's Transform the Informal Sector Together",
+    "subtitle": "Innovative Digital Solutions to Modernize and Optimize Your Business",
+    "cta": "Discover Our Solutions"
+  },
+  "about": {
+    "title": "Our Mission",
+    "description": "We digitize the informal sector in Africa with innovative and adapted solutions",
+    "success": "E-Maquis: Our Success Story",
+    "successDescription": "An application revolutionizing the management of maquis and restaurants"
+  },
+  "team": {
+    "title": "Our Team",
+    "description": "A passionate and experienced team",
+    "roles": {
+      "dev": "Developer",
+      "commercial": "Sales",
+      "designer": "Designer"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Ready to digitize your business?",
+    "button": "Let's discuss your project"
+  }
+}
