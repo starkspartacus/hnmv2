@@ -13,6 +13,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Logo } from "./Logo";
+import { ThemeToggle } from "./theme-toggle";
 
 const navigation = [
   { name: "Accueil", href: "/" },
@@ -45,8 +46,8 @@ export function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/33 shadow-md backdrop-blur-md py-2"
-          : "bg-background/55 backdrop-blur-sm py-4"
+          ? "bg-background/95 shadow-md backdrop-blur-md py-2"
+          : "bg-background/80 backdrop-blur-sm py-4"
       }`}
     >
       <nav
@@ -60,7 +61,8 @@ export function Navbar() {
         </div>
 
         {/* Mobile menu button */}
-        <div className="flex lg:hidden">
+        <div className="flex items-center gap-2 lg:hidden">
+          <ThemeToggle />
           <Button
             variant="ghost"
             size="icon"
@@ -98,6 +100,7 @@ export function Navbar() {
 
         {/* Desktop actions */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4 items-center">
+          <ThemeToggle />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button
@@ -182,25 +185,26 @@ export function Navbar() {
                   ))}
                 </div>
                 <div className="mt-8 pt-6 border-t border-muted">
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="w-full justify-between mb-4"
-                      >
-                        <div className="flex items-center gap-2">
+                  <div className="flex items-center justify-between mb-4">
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="flex items-center gap-2"
+                        >
                           <Globe className="h-4 w-4" />
                           <span>Français</span>
-                        </div>
-                        <ChevronDown className="h-4 w-4 opacity-70" />
-                      </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end">
-                      <DropdownMenuItem>Français</DropdownMenuItem>
-                      <DropdownMenuItem>English</DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
+                          <ChevronDown className="h-4 w-4 opacity-70" />
+                        </Button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent align="end">
+                        <DropdownMenuItem>Français</DropdownMenuItem>
+                        <DropdownMenuItem>English</DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                    <ThemeToggle />
+                  </div>
                   <Button className="w-full bg-red-600 hover:bg-red-700 text-white">
                     Contactez-nous
                   </Button>

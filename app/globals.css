@@ -10,6 +10,16 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .bg-grid-pattern {
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.05) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
 }
 
 @layer base {
@@ -91,21 +101,4 @@ body {
   body {
     @apply bg-background text-foreground;
   }
-}
-
-/* Ajoutez ces styles à votre fichier globals.css */
-.perspective {
-  perspective: 1000px;
-}
-
-.preserve-3d {
-  transform-style: preserve-3d;
-}
-
-.backface-hidden {
-  backface-visibility: hidden;
-}
-
-.rotateY-180 {
-  transform: rotateY(180deg);
 }

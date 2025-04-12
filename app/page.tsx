@@ -175,13 +175,11 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold mb-4">
-              Prêt à digitaliser votre activité ?
+              Prêt à nous rejoindre en tant que partenaire ?
             </h2>
-            <p className="text-xl mb-8">
-              Contactez-nous pour discuter de votre projet
-            </p>
+            <p className="text-xl mb-8">Contactez-nous pour discuter</p>
             <Button size="lg" variant="secondary" className="text-lg">
-              Parlons de votre projet
+              Contactez-nous
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </motion.div>
