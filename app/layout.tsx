@@ -9,7 +9,7 @@ import { Toaster } from "@/components/ui/sonner";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Digital Solutions - Transformation du Secteur Informel",
+  title: "Hauts Numériques et Médias - Transformation du Secteur Informel",
   description:
     "Nous digitalisons le secteur informel en Afrique avec des solutions innovantes",
 };

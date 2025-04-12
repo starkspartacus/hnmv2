@@ -7,41 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, TrendingUp, Smartphone, ArrowRight } from "lucide-react";
 import Link from "next/link";
-const teamMembers = [
-  {
-    name: "Hermann Litie",
-    role: "Fondateur-CEO",
-    image: "/images/hermann.jpeg",
-  },
-  {
-    name: "Aquilas Boua",
-    role: "Co-Fondateur Backend Développeur",
-    image: "/images/akim.jpg",
-  },
-  {
-    name: "Marion Roulle",
-    role: "Co-Fondatrice UX/UI Designer",
-    image: "/images/marion1.jpg",
-  },
-  {
-    name: "Mory Ouattara",
-    role: "Co-Fondateur Full Stack Developer ",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&q=80",
-  },
-  {
-    name: "Moussa Coulibaly",
-    role: "Co-Fondateur Commercial/Communication",
-    image:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&q=80",
-  },
-  {
-    name: "N'Dri Octave",
-    role: "Co-Fondateur Développeur Mobile",
-    image:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&q=80",
-  },
-];
+import TeamSection from "./team-section";
 
 const features = [
   {
@@ -196,41 +162,7 @@ export default function Home() {
       {/* Team Section */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-4">Notre Équipe</h2>
-            <p className="text-xl text-muted-foreground">
-              Une équipe passionnée et expérimentée
-            </p>
-          </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
-                <Card className="overflow-hidden">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    width={400}
-                    height={400}
-                    className="w-full h-64 object-cover"
-                  />
-                  <CardContent className="p-4 text-center">
-                    <h3 className="font-semibold text-lg">{member.name}</h3>
-                    <p className="text-muted-foreground">{member.role}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+          <TeamSection />
         </div>
       </section>
 
