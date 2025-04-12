@@ -12,7 +12,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
+import Image from "next/image";
+import { Logo } from "./Logo";
 const navigation = [
   { name: "Accueil", href: "/" },
   { name: "À propos", href: "/about" },
@@ -30,9 +31,15 @@ export function Navbar() {
         className="flex items-center justify-between p-6 lg:px-8"
         aria-label="Global"
       >
-        <div className="flex lg:flex-1">
+        <div className="flex flex-row items-center gap-2 lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <span className="text-2xl font-bold">Digital Solutions</span>
+            <Image
+              src="/logo/logo-hnm.png"
+              alt="Logo"
+              width={100}
+              height={100}
+            />
+            <Logo className="text-lg font-normal lg:text-2xl" />
           </Link>
         </div>
         <div className="flex lg:hidden">
