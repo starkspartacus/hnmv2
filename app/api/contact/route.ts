@@ -1,8 +1,8 @@
-import { NextResponse } from "next/server";
+// import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 // Définir cette route comme dynamique pour permettre l'utilisation de request.json()
-export const dynamic = "force-dynamic";
+// export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
   try {
@@ -11,9 +11,11 @@ export async function POST(request: Request) {
 
     // Vérification des champs requis
     if (!name || !email || !subject || !message) {
-      return NextResponse.json(
-        { error: "Veuillez remplir tous les champs obligatoires" },
-        { status: 400 }
+      return new Response(
+        JSON.stringify({
+          error: "Veuillez remplir tous les champs obligatoires",
+        }),
+        { status: 400, headers: { "Content-Type": "application/json" } }
       );
     }
 
@@ -83,12 +85,17 @@ export async function POST(request: Request) {
 
     await transporter.sendMail(confirmationMailOptions);
 
-    return NextResponse.json({ success: true });
+    return new Response(JSON.stringify({ success: true }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
   } catch (error) {
     console.error("Erreur lors de l'envoi de l'email:", error);
-    return NextResponse.json(
-      { error: "Une erreur est survenue lors de l'envoi de votre message" },
-      { status: 500 }
+    return new Response(
+      JSON.stringify({
+        error: "Une erreur est survenue lors de l'envoi de votre message",
+      }),
+      { status: 500, headers: { "Content-Type": "application/json" } }
     );
   }
 }
