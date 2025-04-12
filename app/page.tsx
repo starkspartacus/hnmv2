@@ -40,7 +40,7 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920&h=1080&q=80"
+            src="/images/hero.jpg"
             alt="Background"
             fill
             className="object-cover brightness-50"
