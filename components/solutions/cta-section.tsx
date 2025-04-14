@@ -54,8 +54,8 @@ export default function CtaSection() {
             Prêt à transformer votre business?
           </h2>
           <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-90">
-            Rejoignez les milliers d&apos;entrepreneurs africains qui ont déjà
-            adopté nos solutions SaaS pour développer leur activité.
+            Rejoignez ces entrepreneurs africains qui ont déjà adopté nos
+            solutions SaaS pour développer leur activité.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -85,7 +85,7 @@ export default function CtaSection() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white/10"
+                className="bg-white text-red-600 hover:bg-white/90 gap-2"
               >
                 <Link href="/solutions#pricing">Voir les tarifs</Link>
               </Button>
