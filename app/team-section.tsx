@@ -20,7 +20,7 @@ const teamMembers = [
   {
     name: "Marion Roulle",
     role: "Co-Fondatrice UX/UI Designer",
-    image: "/images/marion.jpg",
+    image: "/images/marion1.jpeg",
   },
   {
     name: "Mory Ouattara",
