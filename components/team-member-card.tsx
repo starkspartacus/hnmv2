@@ -19,7 +19,7 @@ interface TeamMemberProps {
 // Bios génériques pour chaque membre (puisqu'elles ne sont pas fournies)
 const defaultBios: Record<string, string> = {
   "Hermann Litie":
-    "En tant que Fondateur et CEO, Hermann dirige la vision stratégique de l'entreprise. Avec une solide expérience dans le secteur numérique, il guide l'équipe vers l'innovation et l'excellence.",
+    "En tant que Fondateur et PDG, Hermann dirige la vision stratégique de l'entreprise. Avec une solide expérience dans le secteur numérique, il guide l'équipe vers l'innovation et l'excellence.",
   "Aquilas Boua":
     "Aquilas est un développeur backend talentueux qui conçoit des architectures robustes et évolutives. Sa maîtrise des technologies serveur garantit la performance et la sécurité de nos applications.",
   "Marion Roulle":
@@ -53,7 +53,7 @@ export function TeamMemberCard({
       {/* Carte principale avec photo */}
       <Card className="h-full w-full overflow-hidden group">
         <div className="relative h-full">
-          <div className="relative h-[70%] overflow-hidden">
+          <div className="relative h-[70%] overflow-hidden gap-3">
             <Image
               src={image || "/placeholder.svg"}
               alt={name}
@@ -61,8 +61,14 @@ export function TeamMemberCard({
               className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               priority
+              style={{
+                objectPosition:
+                  name === "Moussa Coulibaly" || name === "Mory Ouattara"
+                    ? "top"
+                    : "center",
+              }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
 
           <CardContent className="absolute bottom-0 left-0 right-0 p-5 text-center">
@@ -75,7 +81,7 @@ export function TeamMemberCard({
               className="rounded-full bg-background/80 backdrop-blur-sm hover:bg-background"
               onClick={() => setShowBio(true)}
             >
-              En savoir plus
+              En savoir +
             </Button>
           </CardContent>
         </div>
@@ -114,7 +120,7 @@ export function TeamMemberCard({
                     src={image || "/placeholder.svg"}
                     alt={name}
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                   />
                 </div>
 

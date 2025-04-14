@@ -9,13 +9,13 @@ import { TeamMemberCard } from "@/components/team-member-card";
 const teamMembers = [
   {
     name: "Hermann Litie",
-    role: "Fondateur-CEO",
-    image: "/images/hermann.jpeg",
+    role: "Fondateur-PDG",
+    image: "/images/hermann2.jpg",
   },
   {
     name: "Aquilas Boua",
     role: "Co-Fondateur Backend Développeur",
-    image: "/images/akim.jpg",
+    image: "/images/akim2.jpg",
   },
   {
     name: "Marion Roulle",
@@ -25,14 +25,12 @@ const teamMembers = [
   {
     name: "Mory Ouattara",
     role: "Co-Fondateur Full Stack Developer ",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&q=80",
+    image: "/images/mory.jpg",
   },
   {
     name: "Moussa Coulibaly",
     role: "Co-Fondateur Commercial/Communication",
-    image:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&q=80",
+    image: "/images/moussa.jpg",
   },
   {
     name: "N'Dri Octave",
