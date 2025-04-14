@@ -19,7 +19,6 @@ const navigation = [
   { name: "Accueil", href: "/" },
   { name: "À propos", href: "/about" },
   { name: "Solutions", href: "/solutions" },
-  { name: "Contact", href: "/contact" },
 ];
 
 export function Navbar() {
@@ -128,9 +127,14 @@ export function Navbar() {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <Button size="sm" className="bg-red-600 hover:bg-red-700 text-white">
-            Contactez-nous
-          </Button>
+          <Link href="/contact">
+            <Button
+              size="sm"
+              className="bg-red-600 hover:bg-red-700 text-white"
+            >
+              Contactez-nous
+            </Button>
+          </Link>
         </div>
       </nav>
 
@@ -149,7 +153,7 @@ export function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
             />
             <motion.div
-              className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-muted"
+              className="fixed inset-y-0 right-0 z-50 w-full bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-muted"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
@@ -168,7 +172,7 @@ export function Navbar() {
                   <X className="h-6 w-6" aria-hidden="true" />
                 </Button>
               </div>
-              <div className="mt-8 flow-root">
+              <div className="mt-2 flow-root bg-slate-300 p-4">
                 <div className="space-y-4 py-6">
                   {navigation.map((item) => (
                     <Link
@@ -205,9 +209,11 @@ export function Navbar() {
                     </DropdownMenu>
                     <ThemeToggle />
                   </div>
-                  <Button className="w-full bg-red-600 hover:bg-red-700 text-white">
-                    Contactez-nous
-                  </Button>
+                  <Link href="/contact">
+                    <Button className="w-full bg-red-600 hover:bg-red-700 text-white">
+                      Contactez-nous
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </motion.div>

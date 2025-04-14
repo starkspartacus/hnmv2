@@ -34,9 +34,11 @@ export function Logo({
           compact ? "text-sm md:text-base" : "text-base md:text-lg lg:text-xl"
         )}
       >
-        <span className="font-bold text-white">Hauts </span>
+        <span className="font-bold text-slate-900">Hauts </span>
         <span className="font-bold text-red-600">Numériques </span>
-        {!compact && <span className="text-white font-bold">et Médias</span>}
+        {!compact && (
+          <span className="text-slate-900 font-bold">et Médias</span>
+        )}
       </div>
     </div>
   );

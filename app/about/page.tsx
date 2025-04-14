@@ -310,19 +310,23 @@ export default function AboutPage() {
       <TeamSection />
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-red-600 text-white">
+      <section className="py-16 md:py-24 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Prêt à digitaliser votre activité en Afrique ?
+            Prêt à nous rejoindre en tant que partenaire ?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Contactez-nous dès aujourd&apos;hui pour découvrir comment nos
-            solutions SaaS peuvent transformer votre entreprise et vous
-            connecter à de nouvelles opportunités.
+            Contactez-nous dès aujourd&apos;hui pour nous accompagner dans cette
+            aventure de digitalisation.
           </p>
-          <Button size="lg" className="bg-white text-red-600 hover:bg-white/90">
-            Contactez-nous
-          </Button>
+          <Link href="/contact">
+            <Button
+              size="lg"
+              className="bg-white text-red-600 hover:bg-white/90"
+            >
+              Contactez-nous
+            </Button>
+          </Link>
         </div>
       </section>
     </main>
