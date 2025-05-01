@@ -35,8 +35,7 @@ const teamMembers = [
   {
     name: "N'Dri Octave",
     role: "Co-Fondateur Développeur Mobile",
-    image:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&q=80",
+    image: "/images/octave.jpg",
   },
 ];
 
